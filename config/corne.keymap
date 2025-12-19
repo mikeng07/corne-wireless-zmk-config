@@ -82,7 +82,14 @@
             >;
         };
 
-        Control { status = "reserved"; };
+        Controls {
+            bindings = <
+&trans  &trans  &trans            &trans        &trans            &trans    &trans    &kp C_VOL_DN          &kp C_VOLUME_UP       &kp BACKSPACE  &trans  &trans
+&trans  &trans  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_COMMAND  &trans    &kp LEFT  &kp DOWN              &kp UP                &kp RIGHT      &trans  &trans
+&trans  &trans  &trans            &trans        &trans            &trans    &kp TAB   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans         &trans  &trans
+                                  &trans        &kp LEFT_SHIFT    &trans    &trans    &trans                &trans
+            >;
+        };
 
         extra_2 { status = "reserved"; };
 
