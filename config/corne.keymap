@@ -176,14 +176,14 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB     &kp Q              &kp W  &kp E     &kp R     &kp T                &kp Y      &kp U          &kp I       &kp O    &kp P      &kp_tap LG(LC(Q)) ESCAPE
-&kp LSHIFT  &kp A              &kp S  &kp D     &kp F     &new_behavior 2 G    &kp H      &kp J          &kp K       &kp L    &kp SEMI   &kp SQT
-&kp LCTRL   &new_behavior 3 Z  &kp X  &kp C     &kp V     &new_behavior 1 B    &kp N      &kp M          &kp COMMA   &kp DOT  &kp SLASH  &kp_tap RGUI RALT
-                                      &kp LALT  &kp LGUI  &kp SPACE            &kp ENTER  &kp BACKSPACE  &kp ESCAPE
+&kp TAB     &kp Q              &kp W  &kp E  &kp R     &kp T        &kp Y               &kp U          &kp I      &kp O    &kp P      &kp_tap LG(LC(Q)) ESCAPE
+&kp LSHIFT  &kp A              &kp S  &kp D  &kp F     &kp G        &kp H               &kp J          &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LCTRL   &new_behavior 3 Z  &kp X  &kp C  &kp V     &kp B        &kp N               &kp M          &kp COMMA  &kp DOT  &kp SLASH  &kp_tap RGUI RALT
+                                      &mo 1  &kp LGUI  &kp SPACE    &kp_tap LALT ENTER  &kp BACKSPACE  &mo 2
             >;
         };
 
-        Number {
+        Macros {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -199,7 +199,7 @@
             >;
         };
 
-        Symbol {
+        Number-Symbol {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
