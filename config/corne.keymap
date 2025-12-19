@@ -26,8 +26,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            tapping-term-ms = <400>;
         };
     };
 
@@ -134,6 +133,34 @@
             bindings = <&kp LA(N4)>;
             label = "AERO_4";
         };
+
+        aero_5: aero_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N5)>;
+            label = "AERO_5";
+        };
+
+        aero_6: aero_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N6)>;
+            label = "AERO_6";
+        };
+
+        aero_7: aero_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N7)>;
+            label = "AERO_7";
+        };
+
+        aero_8: aero_8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(N8)>;
+            label = "AERO_8";
+        };
     };
 
     keymap {
@@ -148,10 +175,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q              &kp W  &kp E     &kp R     &kp T                    &kp Y                &kp U          &kp I                &kp O    &kp P     &kp_tap LG(LC(Q)) ESCAPE
-&kp LCTRL  &kp A              &kp S  &kp D     &kp F     &kp G                    &kp H                &kp J          &kp K                &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &new_behavior 3 Z  &kp X  &kp C     &kp V     &kp B                    &kp N                &kp M          &kp COMMA            &kp DOT  &kp FSLH  &trans
-                                     &kp LALT  &kp LGUI  &new_behavior 1 SPACE    &new_behavior 2 RET  &kp BACKSPACE  &kp_tap RALT ESCAPE
+&kp TAB    &kp Q              &kp W  &kp E     &kp R     &kp T        &kp Y      &kp U          &kp I       &kp O    &kp P     &mo 3
+&kp LCTRL  &kp A              &kp S  &kp D     &kp F     &kp G        &kp H      &kp J          &kp K       &kp L    &kp SEMI  &mo 2
+&kp LSHFT  &new_behavior 3 Z  &kp X  &kp C     &kp V     &kp B        &kp N      &kp M          &kp COMMA   &kp DOT  &kp RALT  &mo 1
+                                     &kp LALT  &kp LGUI  &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp ESCAPE
             >;
         };
 
@@ -182,7 +209,7 @@
             bindings = <
 &trans  &trans       &trans           &trans           &trans         &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans             &trans  &trans
 &trans  &kp KP_PLUS  &kp KP_SUBTRACT  &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans    &kp EQUAL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &trans  &trans
-&trans  &kp GRAVE    &kp TILDE        &kp PIPE         &kp K_BACK     &trans    &kp UNDER  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &trans  &trans
+&trans  &kp GRAVE    &kp TILDE        &kp PIPE         &kp BACKSLASH  &trans    &kp UNDER  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &trans  &trans
                                       &trans           &trans         &trans    &trans     &trans                &trans
             >;
         };
