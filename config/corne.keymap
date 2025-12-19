@@ -31,6 +31,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        screenshot {
+            bindings = <&kp LG(LS(NUMBER_4))>;
+            key-positions = <36 17>;
+        };
+
+        wholescreenshot {
+            bindings = <&kp LG(LS(NUMBER_3))>;
+            key-positions = <36 16>;
+        };
+
+        emoji {
+            bindings = <&kp LC(LG(SPACE))>;
+            key-positions = <36 15>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
