@@ -218,9 +218,9 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB     &kp Q              &kp W  &kp E  &kp R     &kp T        &kp Y               &kp U          &kp I      &kp O    &kp P      &lock
-&kp LSHIFT  &kp A              &kp S  &kp D  &kp F     &kp G        &kp H               &kp J          &kp K      &kp L    &kp SEMI   &kp RGUI
-&kp LCTRL   &new_behavior 3 Z  &kp X  &kp C  &kp V     &kp B        &kp N               &kp M          &kp COMMA  &kp DOT  &kp SLASH  &kp RALT
+&kp TAB     &kp Q              &kp W  &kp E  &kp R     &kp T        &kp Y               &kp U          &kp I      &kp O    &kp P      &trans
+&kp LSHIFT  &kp A              &kp S  &kp D  &kp F     &kp G        &kp H               &kp J          &kp K      &kp L    &kp SEMI   &trans
+&kp LCTRL   &new_behavior 3 Z  &kp X  &kp C  &kp V     &kp B        &kp N               &kp M          &kp COMMA  &kp DOT  &kp SLASH  &trans
                                       &mo 2  &kp LGUI  &kp SPACE    &kp_tap LALT ENTER  &kp BACKSPACE  &kp ESC
             >;
         };
@@ -259,9 +259,9 @@
 
         Macros-Controls {
             bindings = <
-&trans  &trans  &aero_1   &aero_2   &aero_3   &aero_4     &kp C_PP   &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp BACKSPACE  &trans  &trans
-&trans  &trans  &space_1  &space_2  &space_3  &space_4    &kp LEFT   &kp DOWN              &kp UP                &kp RIGHT      &trans  &trans
-&trans  &trans  &tab_1    &tab_2    &tab_3    &tab_4      &web_back  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &web_forth     &trans  &trans
+&trans  &trans  &aero_1   &aero_2   &aero_3   &aero_4     &kp C_PP   &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp BACKSPACE  &lock     &trans
+&trans  &trans  &space_1  &space_2  &space_3  &space_4    &kp LEFT   &kp DOWN              &kp UP                &kp RIGHT      &kp RGUI  &trans
+&trans  &trans  &tab_1    &tab_2    &tab_3    &tab_4      &web_back  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &web_forth     &kp RALT  &trans
                           &trans    &trans    &trans      &trans     &trans                &trans
             >;
         };
