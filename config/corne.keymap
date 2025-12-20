@@ -162,6 +162,13 @@
             bindings = <&kp LA(N8)>;
             label = "AERO_8";
         };
+
+        lock: lock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(Q))>;
+            label = "LOCK";
+        };
     };
 
     keymap {
@@ -176,10 +183,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB     &kp Q              &kp W  &kp E  &kp R     &kp T        &kp Y               &kp U          &kp I      &kp O    &kp P      &kp_tap LG(LC(Q)) ESCAPE
-&kp LSHIFT  &kp A              &kp S  &kp D  &kp F     &kp G        &kp H               &kp J          &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LCTRL   &new_behavior 3 Z  &kp X  &kp C  &kp V     &kp B        &kp N               &kp M          &kp COMMA  &kp DOT  &kp SLASH  &kp_tap RGUI RALT
-                                      &mo 1  &kp LGUI  &kp SPACE    &kp_tap LALT ENTER  &kp BACKSPACE  &mo 2
+&kp TAB     &kp Q              &kp W  &kp E  &kp R     &kp T        &kp Y               &kp U          &kp I      &kp O    &kp P      &lock
+&kp LSHIFT  &kp A              &kp S  &kp D  &kp F     &kp G        &kp H               &kp J          &kp K      &kp L    &kp SEMI   &kp RGUI
+&kp LCTRL   &new_behavior 3 Z  &kp X  &kp C  &kp V     &kp B        &kp N               &kp M          &kp COMMA  &kp DOT  &kp SLASH  &kp RALT
+                                      &mo 2  &kp LGUI  &kp SPACE    &kp_tap LALT ENTER  &kp BACKSPACE  &kp ESC
             >;
         };
 
@@ -208,19 +215,19 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &trans       &trans           &trans           &trans         &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans             &trans  &trans
-&trans  &kp KP_PLUS  &kp KP_SUBTRACT  &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans    &kp EQUAL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &trans  &trans
-&trans  &kp GRAVE    &kp TILDE        &kp PIPE         &kp BACKSLASH  &trans    &kp UNDER  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &trans  &trans
-                                      &trans           &trans         &trans    &trans     &trans                &trans
+&trans  &kp N1       &kp N2           &kp N3           &kp N4         &kp N5            &kp N6     &kp N7            &kp N8             &kp N9             &kp N0             &trans
+&trans  &kp KP_PLUS  &kp KP_SUBTRACT  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL      &kp EQUAL  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp DOUBLE_QUOTES  &kp DOUBLE_QUOTES  &trans
+&trans  &kp GRAVE    &kp TILDE        &kp PIPE         &kp BACKSLASH  &kp UNDERSCORE    &kp UNDER  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE   &kp SINGLE_QUOTE   &trans
+                                      &trans           &trans         &trans            &trans     &trans            &trans
             >;
         };
 
-        Controls {
+        Macros-Controls {
             bindings = <
-&trans  &trans  &trans      &trans             &trans            &trans                  &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &trans  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &kp C_BRIGHTNESS_INC    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp C_PREV  &kp C_NEXT         &kp C_PLAY_PAUSE  &kp C_BRIGHTNESS_DEC    &trans    &trans    &trans  &trans     &trans  &trans
-                            &trans             &trans            &trans                  &trans    &trans    &trans
+&trans  &trans  &aero_1   &aero_2   &aero_3   &aero_4     &kp C_PP  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp BACKSPACE  &trans  &trans
+&trans  &trans  &space_1  &space_2  &space_3  &space_4    &kp LEFT  &kp DOWN              &kp UP                &kp RIGHT      &trans  &trans
+&trans  &trans  &tab_1    &tab_2    &tab_3    &tab_4      &trans    &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &trans         &trans  &trans
+                          &trans    &trans    &trans      &trans    &trans                &trans
             >;
         };
 
