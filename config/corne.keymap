@@ -169,6 +169,27 @@
             bindings = <&kp LG(LC(Q))>;
             label = "LOCK";
         };
+
+        window_1: window_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "WINDOW_1";
+        };
+
+        window_2: windown_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(TAB)>;
+            label = "WINDOWN_2";
+        };
+
+        window_3: window_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(GRAVE)>;
+            label = "WINDOW_3";
+        };
     };
 
     keymap {
@@ -224,10 +245,10 @@
 
         Macros-Controls {
             bindings = <
-&trans  &trans  &aero_1   &aero_2   &aero_3   &aero_4     &kp C_PP  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp BACKSPACE  &trans  &trans
-&trans  &trans  &space_1  &space_2  &space_3  &space_4    &kp LEFT  &kp DOWN              &kp UP                &kp RIGHT      &trans  &trans
-&trans  &trans  &tab_1    &tab_2    &tab_3    &tab_4      &trans    &kp C_BRIGHTNESS_INC  &kp C_BRIGHTNESS_DEC  &trans         &trans  &trans
-                          &trans    &trans    &trans      &trans    &trans                &trans
+&trans  &trans  &aero_1   &aero_2   &aero_3   &aero_4     &kp C_PP   &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp BACKSPACE  &trans  &trans
+&trans  &trans  &space_1  &space_2  &space_3  &space_4    &kp LEFT   &kp DOWN              &kp UP                &kp RIGHT      &trans  &trans
+&trans  &trans  &tab_1    &tab_2    &tab_3    &tab_4      &window_1  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &window_2      &trans  &trans
+                          &trans    &trans    &trans      &trans     &trans                &trans
             >;
         };
 
