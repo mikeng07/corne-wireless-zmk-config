@@ -15,7 +15,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <800>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
         };
@@ -26,8 +26,9 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <195>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
+            quick-tap-ms = <200>;
         };
     };
 
@@ -218,14 +219,14 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB     &kp Q              &kp W  &kp E  &kp R     &kp T        &kp Y               &kp U          &kp I      &kp O    &kp P      &trans
-&kp LSHIFT  &kp A              &kp S  &kp D  &kp F     &kp G        &kp H               &kp J          &kp K      &kp L    &kp SEMI   &trans
-&kp LCTRL   &new_behavior 3 Z  &kp X  &kp C  &kp V     &kp B        &kp N               &kp M          &kp COMMA  &kp DOT  &kp SLASH  &trans
-                                      &mo 2  &kp LGUI  &kp SPACE    &kp_tap LALT ENTER  &kp BACKSPACE  &kp ESC
+&kp ESCAPE  &kp Q              &kp W  &kp E  &kp R     &kp T        &kp Y               &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
+&kp TAB     &kp A              &kp S  &kp D  &kp F     &kp G        &kp H               &kp J  &kp K      &kp L    &kp SEMI   &kp RALT
+&kp LSHFT   &new_behavior 3 Z  &kp X  &kp C  &kp V     &kp B        &kp N               &kp M  &kp COMMA  &kp DOT  &kp SLASH  &lock
+                                      &mo 2  &kp LGUI  &kp SPACE    &kp_tap LALT ENTER  &mo 1  &kp RGUI
             >;
         };
 
-        Macros {
+        coding {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -234,14 +235,14 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6   &kp N7   &kp N8   &kp N9   &kp N0      &trans
-&trans  &space_1  &space_2  &space_3  &space_4  &trans    &aero_1  &aero_2  &aero_3  &aero_4  &kp RSHIFT  &trans
-&trans  &tab_1    &tab_2    &tab_3    &tab_4    &trans    &trans   &trans   &trans   &trans   &trans      &trans
-                            &trans    &trans    &trans    &trans   &trans   &trans
+&trans  &trans  &trans  &trans     &trans    &trans      &kp LC(C)   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &trans  &trans
+&trans  &trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI    &kp ESCAPE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSPACE      &trans  &trans
+&trans  &trans  &trans  &trans     &trans    &trans      &kp TAB     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT            &trans  &trans
+                        &trans     &trans    &trans      &trans      &trans                &trans
             >;
         };
 
-        Number-Symbol {
+        math {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -250,19 +251,19 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp N1       &kp N2           &kp N3           &kp N4         &kp N5          &kp N6                &kp N7                 &kp N8            &kp N9             &kp N0             &trans
-&trans  &kp KP_PLUS  &kp KP_SUBTRACT  &kp KP_MULTIPLY  &kp KP_DIVIDE  &kp KP_EQUAL    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DOUBLE_QUOTES  &trans
-&trans  &kp GRAVE    &kp TILDE        &kp PIPE         &kp BACKSLASH  &kp MINUS       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN     &kp GREATER_THAN   &kp SINGLE_QUOTE   &trans
-                                      &trans           &trans         &trans          &trans                &trans                 &kp LEFT_SHIFT
+&trans  &kp N1     &kp N2         &kp N3         &kp N4            &kp N5           &kp N6        &kp N7     &kp N8          &kp N9         &kp N0         &trans
+&trans  &kp TILDE  &kp BACKSLASH  &kp PIPE       &kp CARET         &kp AMPERSAND    &kp PLUS      &kp MINUS  &kp EQUAL       &kp BACKSPACE  &kp SEMICOLON  &trans
+&trans  &trans     &trans         &kp LESS_THAN  &kp GREATER_THAN  &kp GRAVE        &kp ASTERISK  &kp FSLH   &kp UNDERSCORE  &trans         &trans         &trans
+                                  &trans         &trans            &trans           &trans        &trans     &trans
             >;
         };
 
-        Macros-Controls {
+        control {
             bindings = <
-&trans  &trans  &aero_1   &aero_2   &aero_3   &aero_4     &kp C_PP   &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp BACKSPACE  &lock     &trans
-&trans  &trans  &space_1  &space_2  &space_3  &space_4    &kp LEFT   &kp DOWN              &kp UP                &kp RIGHT      &kp RGUI  &trans
-&trans  &trans  &tab_1    &tab_2    &tab_3    &tab_4      &web_back  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &web_forth     &kp RALT  &trans
-                          &trans    &trans    &trans      &trans     &trans                &trans
+&trans  &trans  &trans     &trans    &trans    &trans    &kp C_PP  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp BACKSPACE  &trans  &trans
+&trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans    &kp LEFT  &kp DOWN              &kp UP                &kp RIGHT      &trans  &trans
+&trans  &trans  &trans     &trans    &trans    &trans    &trans    &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans         &trans  &trans
+                           &trans    &trans    &trans    &trans    &trans                &trans
             >;
         };
 
