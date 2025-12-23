@@ -237,7 +237,7 @@
             bindings = <
 &trans  &trans  &trans     &trans    &trans    &trans    &trans  &kp LC(C)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &trans
 &trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &trans    &trans  &kp ESC    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSPACE      &trans
-&trans  &trans  &trans     &trans    &trans    &trans    &trans  &kp TAB    &kp RIGHT_BRACKET     &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &trans
+&trans  &trans  &trans     &trans    &trans    &trans    &trans  &kp TAB    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE   &trans
                            &trans    &trans    &trans    &trans  &trans     &trans
             >;
         };
