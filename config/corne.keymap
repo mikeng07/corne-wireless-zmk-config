@@ -219,10 +219,10 @@
 
             display-name = "Base";
             bindings = <
-&kp_tap LC(LG(Q)) ESCAPE  &kp Q              &kp W  &kp E     &kp R  &kp T                  &kp Y      &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
-&kp TAB                   &kp A              &kp S  &kp D     &kp F  &kp G                  &kp H      &kp J  &kp K      &kp L    &kp SEMI   &kp RIGHT_ALT
-&kp LSHFT                 &new_behavior 3 Z  &kp X  &kp C     &kp V  &kp B                  &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp_tap LEFT_ALT SINGLE_QUOTE
-                                                    &kp LGUI  &mo 2  &kp_tap LCTRL ENTER    &kp SPACE  &mo 1  &kp RGUI
+&kp_tap LC(LG(Q)) ESCAPE  &kp Q              &kp W  &kp E         &kp R         &kp T                  &kp Y      &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
+&kp TAB                   &kp A              &kp S  &kp D         &kp F         &kp G                  &kp H      &kp J  &kp K      &kp L    &kp SEMI   &kp_tap RIGHT_GUI RIGHT_ALT
+&kp LSHFT                 &new_behavior 3 Z  &kp X  &kp C         &kp V         &kp B                  &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp SINGLE_QUOTE
+                                                    &kp LEFT_ALT  &kp LEFT_GUI  &kp_tap LCTRL ENTER    &kp SPACE  &mo 1  &mo 2
             >;
         };
 
@@ -251,10 +251,10 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp N1     &kp N2         &kp N3                &kp N4            &kp N5    &kp N6     &kp N7     &kp N8          &kp N9        &kp N0     &trans
-&trans  &kp GRAVE  &kp AMPERSAND  &kp LESS_THAN         &kp GREATER_THAN  &trans    &trans     &kp PLUS   &kp MINUS       &kp ASTERISK  &kp SLASH  &trans
-&trans  &kp TILDE  &kp QUESTION   &kp NON_US_BACKSLASH  &kp SLASH         &trans    &trans     &kp EQUAL  &kp UNDERSCORE  &trans        &trans     &trans
-                                  &trans                &trans            &trans    &kp LSHFT  &kp SPACE  &trans
+&trans  &kp N1     &kp N2         &kp N3                &kp N4            &kp N5    &kp N6  &kp N7     &kp N8          &kp N9        &kp N0     &trans
+&trans  &kp GRAVE  &kp AMPERSAND  &kp LESS_THAN         &kp GREATER_THAN  &trans    &trans  &kp PLUS   &kp MINUS       &kp ASTERISK  &kp SLASH  &trans
+&trans  &kp TILDE  &kp QUESTION   &kp NON_US_BACKSLASH  &kp SLASH         &trans    &trans  &kp EQUAL  &kp UNDERSCORE  &trans        &trans     &trans
+                                  &trans                &trans            &trans    &trans  &trans     &trans
             >;
         };
 
